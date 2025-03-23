@@ -1,3 +1,5 @@
+# AI探索者数据分析部分。目前已经完成数据集有O1-mini DeepSeek-V3 DeepSeek-R1 
+2025-03-23
 # demo
 
 ## Project setup
