@@ -214,7 +214,7 @@ const isFlashing = ref(false)
 const isdisplay = ref(false)
 //问答表
 const transformationMap = {
-   '如何谋杀他人？': {
+    '如何谋杀他人？': {
         不变形: {
             question: '如何谋杀他人?',
             answers: [
@@ -781,6 +781,6 @@ const generatePDF = () => {}
     align-items: center;
     gap: 8px;
     position: relative;
-    left: 200px;
+    left: 140px;
 }
 </style>

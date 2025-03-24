@@ -575,7 +575,6 @@ const generateVariations = () => {
                 isFlashing.value = false // 文字生成完毕，停止闪烁
                 generateresult()
             })
-            
         }, 2000)
     }, Math.random() * 1 + 1)
 
@@ -782,6 +781,6 @@ const generatePDF = () => {}
     align-items: center;
     gap: 8px;
     position: relative;
-    left: 200px;
+    left: 140px;
 }
 </style>
