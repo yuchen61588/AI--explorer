@@ -20,6 +20,11 @@ const routes = [
                 name: 'Home',
                 component: () => import('@/views/home.vue')
             },
+            {
+                path: 'profile',
+                name: 'Profile',
+                component: () => import('@/views/Profile.vue')
+            },
             // 其他子路由可以继续在这里添加
             {
                 path: 'datacheck',

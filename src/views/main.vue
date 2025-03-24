@@ -66,7 +66,12 @@
         <div class="main-area" :class="{ 'blur-effect': showMask }">
             <div class="nav-top">
                 <div class="time-display">{{ currentTime }}</div>
-                <img src="@/icons/avatar.png" alt="" class="avatar" />
+                <img
+                    src="@/icons/avatar.png"
+                    alt=""
+                    class="avatar"
+                    v-show="!hideAvatar"
+                />
             </div>
             <router-view></router-view>
         </div>
@@ -86,16 +91,19 @@ import {
     ArrowUp,
     ArrowDown,
     Sunny,
-    Moon // 新增箭头图标
+    Moon,
+    ChatDotRound
 } from '@element-plus/icons-vue'
 
 const router = useRouter()
 const currentTime = ref('')
+const hideAvatar = ref(false)
 
 // 监听路由变化
 watch(
     () => router.currentRoute.value.path,
     newPath => {
+        hideAvatar.value = newPath.startsWith('/main/profile')
         // 找到匹配的导航项索引
         const matchedIndex = navItems.value.findIndex(
             item => item.path && newPath.startsWith(item.path)
@@ -217,8 +225,8 @@ const navItems = ref([
         path: '/main/home' // 新增路径属性
     },
     {
-        text: '数据审核',
-        icon: Setting,
+        text: '测评体验',
+        icon: ChatDotRound,
         expanded: false,
         activeChild: null,
         path: '/main/datacheck'
@@ -337,6 +345,7 @@ a.folder .el-icon {
     left: 70px;
     top: 13px;
     height: 35px;
+    width: 120px;
     font-size: 30px;
     color: #7ecafe;
     font-family: '江西拙楷';
@@ -425,7 +434,7 @@ a.folder .el-icon {
 }
 
 .main-area {
-    margin-left: 220px; /* 与导航栏宽度一致 */
+    margin-left: 220px;
     transition: margin 0.3s ease;
     flex: 1;
 }
@@ -503,14 +512,14 @@ a.folder .el-icon {
     margin-left: 220px; /* 导航展开时的边距 */
     transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s ease; /* 同步过渡效果 */
     flex: 1;
-    min-width: calc(100% - 220px); /* 防止内容溢出 */
-    width: auto;
+    width: calc(100% - 220px); /* 防止内容溢出 */
+    overflow-x: auto;
 }
 
 .nav-left[style*='-220px'] + .main-area {
     /* 当导航折叠时 */
     margin-left: 0;
-    min-width: 100%;
+    width: 100%;
 }
 
 .main-area .nav-top {

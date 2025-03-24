@@ -781,6 +781,6 @@ const generatePDF = () => {}
     align-items: center;
     gap: 8px;
     position: relative;
-    left: 200px;
+    left: 140px;
 }
 </style>
