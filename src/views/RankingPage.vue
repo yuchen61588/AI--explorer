@@ -37,13 +37,13 @@
                                     &nbsp;&nbsp;安全性
                                 </th>
                                 <th scope="col" class="header-cell">
-                                    知识记忆-问答
+                                    推理速度
                                 </th>
                                 <th scope="col" class="header-cell">
-                                    逻辑推理-选择
+                                    推理精度
                                 </th>
                                 <th scope="col" class="header-cell">
-                                    逻辑推理-问答
+                                    计算资源消耗
                                 </th>
                                 <th
                                     scope="col"
