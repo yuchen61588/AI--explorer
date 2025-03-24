@@ -263,8 +263,6 @@ const tableData = ref([
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
     box-shadow: var(--shadow-sm);
     margin-bottom: 20px;
     color: var(--text-light);
@@ -298,11 +296,11 @@ const tableData = ref([
 }
 
 .section-title {
-    text-align: center;
     color: var(--text-primary);
     margin-bottom: 25px;
     font-size: 22px;
     position: relative;
+    text-align: center;
 }
 
 .section-title::after {
@@ -315,6 +313,7 @@ const tableData = ref([
     height: 3px;
     background-color: var(--primary-color);
     border-radius: 3px;
+    text-align: center;
 }
 
 /* Model Table Section */
@@ -411,7 +410,7 @@ const tableData = ref([
 }
 
 .footer-text {
-    color: var(--text-light);
+    color: #fff;
     text-align: center;
     margin: 0;
 }

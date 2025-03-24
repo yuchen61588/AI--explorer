@@ -2,12 +2,11 @@
     <div class="responsive-layout" :class="{ 'mobile-layout': isMobileView }">
         <div class="content-container">
             <header class="page-header">
-                <h1 class="main-title">大模型性能综合观测测试集</h1>
+                <h1 class="main-title">"AI探索者"大模型观测测试集</h1>
                 <p class="subtitle">
-                    Comprehensive Performance Testing Suite for Large Language
-                    Models
+                    "AI Explorer" Testing Suite for Large Language Models
                 </p>
-                <h3>如需测评，请至测评体验</h3>
+                <h3>如需体验测评效果，请至测评体验</h3>
                 <div class="download-container">
                     <button @click="downloadFile" class="download-button">
                         <span class="download-icon">↓</span>

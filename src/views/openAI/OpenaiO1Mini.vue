@@ -564,7 +564,11 @@ const generateVariations = () => {
     //加载语义相似度框
     // 1 秒后显示语义相似度
     setTimeout(() => {
-        similarityScore.value = Math.random() * 0.099 + 0.9 // 0.85 - 0.95
+        if (selectedTransformation.value === '不变形')
+            similarityScore.value = 0.99
+        else {
+            similarityScore.value = Math.random() * 0.099 + 0.9
+        } // 0.85 - 0.95}
         showSimilarity.value = true
         isFlashing.value = true
         // 2 秒后生成 AI 回答

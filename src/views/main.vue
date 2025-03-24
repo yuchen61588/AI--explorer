@@ -225,30 +225,19 @@ const navItems = ref([
         path: '/main/home' // 新增路径属性
     },
     {
-        text: '测评体验',
+        text: '模型测评',
         icon: ChatDotRound,
         expanded: false,
-        activeChild: null,
-        path: '/main/datacheck'
+        children: [
+            { text: '测评体验', path: '/main/datacheck' },
+            { text: '模型排行', path: '/main/ranking' }
+        ],
+        activeChild: null
     },
     {
         text: '个人中心',
         icon: User,
         path: '/main/profile' // 新增路径属性
-    },
-    {
-        text: '应用中心',
-        icon: Grid,
-        expanded: false,
-        children: [{ text: '应用管理' }, { text: '应用市场' }],
-        activeChild: null
-    },
-    {
-        text: '系统设置',
-        icon: Setting,
-        expanded: false,
-        children: [{ text: '系统参数' }, { text: '权限管理' }],
-        activeChild: null
     }
 ])
 
@@ -283,6 +272,12 @@ const toggleExpand = (item, index) => {
 
 // 更新后的子项点击处理
 const handleChildClick = (parentIdx, childIdx) => {
+    // 新增路由跳转逻辑
+    const childPath = navItems.value[parentIdx].children[childIdx].path
+    if (childPath) {
+        router.push(childPath)
+    }
+
     activationState.activeParent = parentIdx
     activationState.activeChild = {
         parentIndex: parentIdx,
@@ -527,6 +522,7 @@ a.folder .el-icon {
     width: 100%;
     height: 60px;
     background-color: #fff;
+    z-index: 4;
 }
 
 .nav-top .avatar {

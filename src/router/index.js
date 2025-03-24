@@ -25,6 +25,11 @@ const routes = [
                 name: 'Profile',
                 component: () => import('@/views/Profile.vue')
             },
+            {
+                path: 'ranking',
+                name: 'Ranking',
+                component: () => import('@/views/RankingPage.vue')
+            },
             // 其他子路由可以继续在这里添加
             {
                 path: 'datacheck',
