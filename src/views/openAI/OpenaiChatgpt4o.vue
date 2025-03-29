@@ -46,7 +46,7 @@
                         >
                     </el-form-item>
                     <el-form-item>
-                        <button @click="downloadFile" class="download-button">
+                        <button class="download-button">
                             <span class="download-icon">↓</span>
                             下载测评报告
                         </button>

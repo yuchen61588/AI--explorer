@@ -8,10 +8,12 @@
                 </p>
                 <h3>如需体验测评效果，请至测评体验</h3>
                 <div class="download-container">
-                    <button @click="downloadFile" class="download-button">
-                        <span class="download-icon">↓</span>
-                        下载测试集文件
-                    </button>
+                    <a href="/题库.csv" download="/题库.csv">
+                        <button class="download-button">
+                            <span class="download-icon">↓</span>
+                            下载测试集文件
+                        </button>
+                    </a>
                 </div>
             </header>
 

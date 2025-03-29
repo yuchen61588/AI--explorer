@@ -191,14 +191,19 @@
                                     </div>
                                 </td>
                                 <td class="table-cell">
-                                    <button class="download-button">
-                                        <img
-                                            src="https://unpkg.com/lucide-static@latest/icons/download.svg"
-                                            class="button-icon"
-                                            alt="Download"
-                                        />
-                                        下载
-                                    </button>
+                                    <a
+                                        :href="model.source"
+                                        :download="model.source"
+                                    >
+                                        <button class="download-button">
+                                            <img
+                                                src="https://unpkg.com/lucide-static@latest/icons/download.svg"
+                                                class="button-icon"
+                                                alt="Download"
+                                            />
+                                            下载
+                                        </button></a
+                                    >
                                 </td>
                             </tr>
                         </tbody>
@@ -694,7 +699,8 @@ const models = ref([
             knowledgeQA: 88.47,
             logicSelect: 85.86,
             logicQA: 89.69
-        }
+        },
+        source: '/o3_mini.pdf'
     },
     {
         name: 'o1 preview',
@@ -707,7 +713,8 @@ const models = ref([
             knowledgeQA: 85.99,
             logicSelect: 86.28,
             logicQA: 88.37
-        }
+        },
+        source: '/o1-preview.pdf'
     },
     {
         name: 'deepseek r1',
@@ -720,7 +727,8 @@ const models = ref([
             knowledgeQA: 79.64,
             logicSelect: 93.06,
             logicQA: 83.56
-        }
+        },
+        source: '/DeepSeek-R1.pdf'
     },
     {
         name: 'QwQ-32b-thinking',
@@ -733,7 +741,8 @@ const models = ref([
             knowledgeQA: 82.47,
             logicSelect: 88.92,
             logicQA: 84.43
-        }
+        },
+        source: '/QWQ-32B-thinking.pdf'
     },
     {
         name: 'qwen2.5 max',
@@ -746,7 +755,8 @@ const models = ref([
             knowledgeQA: 84.37,
             logicSelect: 82.75,
             logicQA: 85.63
-        }
+        },
+        source: '/qwen25max.pdf'
     },
     {
         name: 'deepseek V3',
@@ -759,7 +769,8 @@ const models = ref([
             knowledgeQA: 75.93,
             logicSelect: 89.5,
             logicQA: 85.7
-        }
+        },
+        source: '/DeepSeek-V3.pdf'
     },
     {
         name: 'Llama-3.3-Nemotron-70B-Instruct',
@@ -772,7 +783,8 @@ const models = ref([
             knowledgeQA: 81.17,
             logicSelect: 78.27,
             logicQA: 83.25
-        }
+        },
+        source: '/Llama-3.3-Nemotron-70B-Instruct.pdf'
     },
     {
         name: 'chatgpt-4o',
@@ -785,7 +797,8 @@ const models = ref([
             knowledgeQA: 67.82,
             logicSelect: 85.19,
             logicQA: 79.18
-        }
+        },
+        source: '/chatgpt-4o.pdf'
     },
     {
         name: 'Mixtral-8x7B',
@@ -798,7 +811,8 @@ const models = ref([
             knowledgeQA: 72.42,
             logicSelect: 79.19,
             logicQA: 76.15
-        }
+        },
+        source: '/Mixtral-8x7B.pdf'
     },
     {
         name: 'Hunyuan-trubo-20250226',
@@ -811,7 +825,8 @@ const models = ref([
             knowledgeQA: 75.54,
             logicSelect: 77.43,
             logicQA: 74.34
-        }
+        },
+        source: '/Hunyuan-turbo-20250226.pdf'
     },
     {
         name: 'GLM-4-Plus-0111',
@@ -824,7 +839,8 @@ const models = ref([
             knowledgeQA: 72.42,
             logicSelect: 79.19,
             logicQA: 76.15
-        }
+        },
+        source: '/GLM-4-Plus-0111.pdf'
     },
     {
         name: 'llama-3.1-405b-instruct-bf16',
@@ -837,7 +853,8 @@ const models = ref([
             knowledgeQA: 72.42,
             logicSelect: 79.19,
             logicQA: 76.15
-        }
+        },
+        source: '/Llama-3.1-405b-instruct-bf16.pdf'
     },
     {
         name: 'GLM-4-9b-chat',
@@ -850,7 +867,8 @@ const models = ref([
             knowledgeQA: 72.42,
             logicSelect: 79.19,
             logicQA: 76.15
-        }
+        },
+        source: '/GLM-4-9b-chat.pdf'
     },
     {
         name: 'doubao',
@@ -863,7 +881,8 @@ const models = ref([
             knowledgeQA: 72.42,
             logicSelect: 79.19,
             logicQA: 76.15
-        }
+        },
+        source: '/doubao.pdf'
     }
 ])
 

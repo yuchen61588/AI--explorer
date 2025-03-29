@@ -344,7 +344,7 @@ a.folder .el-icon {
     font-size: 30px;
     color: #7ecafe;
     font-family: '江西拙楷';
-    z-index: 4;
+    z-index: 8;
 }
 
 /* 折叠状态样式 */

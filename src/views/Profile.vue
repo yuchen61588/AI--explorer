@@ -22,13 +22,6 @@
             </div>
 
             <div class="detail-item">
-                <div class="detail-label">Balance</div>
-                <div class="detail-value">
-                    {{ formatCurrency(user.balance) }}
-                </div>
-            </div>
-
-            <div class="detail-item">
                 <div class="detail-label">Birthday</div>
                 <div class="detail-value">{{ formatDate(user.birthday) }}</div>
             </div>
